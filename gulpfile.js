@@ -204,6 +204,10 @@ gulp.task('bump', function() {
         .pipe(gulp.dest(config.root));
 });
 
+gulp.task('serve-deploy', ['optimize'], function () {
+    log('*** Building web project Finished');
+});
+
 gulp.task('serve-build', ['optimize'], function() {
     serve(false /* isDev */);
 });
