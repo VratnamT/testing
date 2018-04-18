@@ -1,0 +1,90 @@
+<!--Contact Section Starts Here-->
+<section id="get-it-now">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3><strong>Meditate on the Go</strong></h3>
+                <hr>
+                <p class="subtitle">Get it to your iPhone</p>
+                <div class="download-btn">
+                    <a href="https://itunes.apple.com/in/app/prarthanai/id1120632042?mt=8" target="_blank" class="btn btn-dark">
+                        <i class="fa fa-apple"></i>
+                        <span>Download on the <br><b>App Store</b></span>
+                    </a>
+                </div>
+                <p class="subtitle vmo-refer-align">or Invite your friend(s) through email</p>
+                <div id="emailer">
+                    <ul class="tab">
+                        <p class="subtitle vmo-toggle-fsize">Select a language</p>
+                        <li><a onclick="openCity(event, 'Tamil-email')" class="btn btn-lg tablinks vmo-toggle-width">Tamil</a></li>
+                        <li><a onclick="openCity(event, 'English-email')" class="btn btn-lg tablinks vmo-toggle-width">English</a></li>
+                    </ul>
+                    <!--Tamil email form statrs here-->
+                    <div id="Tamil-email" class="tabcontent">
+                        <form name="sendemailform" novalidate action="">
+                            <div class="form-group vmo-formelement-space" ng-class="{ 'has-error' : sendemailform.FirstName.$invalid && !sendemailform.FirstName.$pristine }">
+                                <input type="text" name="FirstName" class="form-control" id="Name" ng-pattern="/^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$/" ng-model="myInput.Name" placeholder="* அனுப்புனர் பெயர்" required>
+                                <p ng-show="sendemailform.FirstName.$error.pattern && !sendemailform.FirstName.$pristine" class="help-block vm_alertmsg">* Please enter a valid name.</p>
+                                <p ng-show="sendemailform.FirstName.$error.required && !sendemailform.FirstName.$pristine" class="help-block vm_alertmsg">* Name should not be empty</p>
+                            </div>
+                            <div class="form-group" ng-class="{ 'has-error' : sendemailform.emailinput.$invalid && !sendemailform.emailinput.$pristine }">
+                                <input type="hidden" id="language" name="language" value="tamil" ng-model="myInput.Language">
+                                <input type="email" id="Email" name="emailinput" class="form-control" ng-pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" placeholder="* மின்னஞ்சல் முகவரி" ng-model="myInput.Email" required>
+                                <input type="hidden" id="language" name="language" value="{{myInput.Language}}" ng-model="myengInput.Language" ng-init="myInput.Language='tamil'">
+                                <p ng-show="sendemailform.emailinput.$error.required && !sendemailform.emailinput.$pristine" class="help-block vm_alertmsg">* Email should not be empty</p>
+                                <p ng-show="sendemailform.emailinput.$error.pattern && !sendemailform.emailinput.$pristine" class="help-block vm_alertmsg">* Please Enter a valid email.</p>
+                                <a ng-click="EmailFunction(myInput)" id="tamilid" ng-disabled="sendemailform.$invalid" class="btn btn-green vm-tamilsend-btn"><strong>
+                        அழைப்பு அனுப்பு</strong><i class="fa fa-arrow-right"></i>
+                        </a>
+                            </div>
+                            <div class="spinner" ng-show="httpRequestloading" id="spinnerModal">
+                                <div class="httpRequest-loader vmo-spinner"><i class="fa fa-spinner fa-spin fa-2x"></i>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--Tamil email form ends here-->
+                    <!--English email form statrs here-->
+                    <div id="English-email" class="tabcontent">
+                        <form name="sendemailformeng" novalidate action="">
+                            <div class="form-group vmo-formelement-space" ng-class="{ 'has-error' : sendemailformeng.FirstName.$invalid && !sendemailformeng.FirstName.$pristine}">
+                                <input type="text" name="FirstName" class="form-control name" ng-pattern="/^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$/" id="Name" placeholder="* Sender name" ng-model="myengInput.Name" required>
+                                <input type="hidden" id="language" name="language" value="{{myengInput.Language}}" ng-model="myengInput.Language" ng-init="myengInput.Language='english'">
+                                <p ng-show="sendemailformeng.FirstName.$error.required && !sendemailformeng.FirstName.$pristine" class="help-block vm_alertmsg">* Name should not be empty</p>
+                                <p ng-show="sendemailformeng.FirstName.$error.pattern && !sendemailformeng.FirstName.$pristine" class="help-block vm_alertmsg">* Please enter a valid name.</p>
+                            </div>
+                            <div class="form-group" ng-class="{ 'has-error' : sendemailformeng.emailenginput.$invalid && !sendemailformeng.emailenginput.$pristine }">
+                                <input type="email" id="Email" name="emailenginput" class="form-control email" ng-model="myengInput.Email" ng-pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/" placeholder="* Email address" required>
+                                <p ng-show="sendemailformeng.emailenginput.$error.required && !sendemailformeng.emailenginput.$pristine" class="help-block vm_alertmsg">* Email should not be empty</p>
+                                <p ng-show="sendemailformeng.emailenginput.$error.pattern && !sendemailformeng.emailenginput.$pristine" class="help-block vm_alertmsg">*Please enter a valid email.</p>
+                                <a ng-click="EmailFunction(myengInput)" id="engid" ng-disabled="sendemailformeng.$invalid" class="btn btn-green vm-engsend-btn">Send Invite<i class="fa fa-arrow-right"></i></a>
+                            </div>
+                            <div class="spinner" ng-show="httpRequestloading" id="spinnerModal">
+                                <div class="httpRequest-loader vmo-spinner"><i class="fa fa-spinner fa-spin fa-2x"></i>
+                                </div>
+                            </div>
+                            <br>
+                        </form>
+                    </div>
+                    <!--English email form Ends here-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Contact Section Ends Here-->
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>

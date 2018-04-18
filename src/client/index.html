@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+      <title>Tamil Prarthanai | Tamil Prayer Apps</title>
+      <meta name="description" content="Prarthanai is a tamil prayer app  where you can look for answers for a few issues as mantras. This application helps you to encounter the force of God with straightforward and simple to peruse Prarthanai. The app is specially designed for Tamil reading users, where you can read problems and solutions in Tamil. " />
+      <meta name="keywords" content="Prarthanai, tamil prayers,tamil mantras,special prarthanai,todays prarthanai,tamil prayer apps,daily prarthanai,Hindu Prayers in Tamil,tamil hindu prayers,special prayers" />
+
+
+      <base href="/">
+      <style>
+          /* This helps the ng-show/ng-hide animations start at the right place. */
+          /* Since Angular has this but needs to load, this gives us the class early. */
+          .ng-hide { display: none!important; }
+      </style>
+
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-70260060-2', 'auto');
+        ga('send', 'pageview');
+      </script>
+
+      <link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="images/favicon.png"> 
+      <!-- build:css styles/lib.css-->
+      <!-- bower:css-->
+      <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" />
+      <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
+      <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+      <link rel="stylesheet" href="/bower_components/icomoon-bower/style.css" />
+      <link rel="stylesheet" href="/bower_components/simple-line-icons/css/simple-line-icons.css" />
+      <link rel="stylesheet" href="/bower_components/magnific-popup/dist/magnific-popup.css" />
+      <link rel="stylesheet" href="/bower_components/bxslider-4/dist/jquery.bxslider.css" />
+      <!-- endbower-->
+      <!-- endbuild-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <!-- build:css styles/app.css-->
+      <!-- inject:css-->
+      <link rel="stylesheet" href="/.tmp/styles.css">
+      <!-- endinject-->
+      <!-- endbuild-->
+
+  </head>
+  <body>
+    <div ng-include="'app/layout/shell.html'"></div>
+  </body>
+
+  <!-- build:js js/lib.js-->
+  <!-- bower:js-->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/bower_components/extras.angular.plus/ngplus-overlay.js"></script>
+  <script src="/bower_components/moment/moment.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="/bower_components/toastr/toastr.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.js"></script>
+  <script src="/bower_components/jquery.easing/js/jquery.easing.js"></script>
+  <script src="/bower_components/underscore/underscore.js"></script>
+  <script src="/bower_components/angular-cache/dist/angular-cache.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+  <script src="/bower_components/jquery.stellar/jquery.stellar.js"></script>
+  <script src="/bower_components/waypoints/lib/noframework.waypoints.js"></script>
+  <script src="/bower_components/wow/dist/wow.js"></script>
+  <script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
+  <script src="/bower_components/bxslider-4/dist/jquery.bxslider.js"></script>
+  <!-- endbower-->
+  <!-- endbuild-->
+  <!-- build:js js/app.js-->
+  <!-- inject:js-->
+  <script src="/src/client/app/app.module.js"></script>
+  <script src="/src/client/app/layout/layout.module.js"></script>
+  <script src="/src/client/app/core/core.module.js"></script>
+  <script src="/src/client/app/product/product.module.js"></script>
+  <script src="/src/client/app/blocks/logger/logger.module.js"></script>
+  <script src="/src/client/app/blocks/exception/exception.module.js"></script>
+  <script src="/src/client/app/blocks/router/router.module.js"></script>
+  <script src="/src/client/app/blocks/underscore/underscore.module.js"></script>
+  <script src="/src/client/app/main.js"></script>
+  <script src="/src/client/app/layout/shell.controller.js"></script>
+  <script src="/src/client/app/core/common.js"></script>
+  <script src="/src/client/app/core/config.js"></script>
+  <script src="/src/client/app/core/constants.js"></script>
+  <script src="/src/client/app/core/dataservice.js"></script>
+  <script src="/src/client/app/product/product.controller.js"></script>
+  <script src="/src/client/app/product/product.route.js"></script>
+  <script src="/src/client/app/product/product.service.js"></script>
+  <script src="/src/client/app/blocks/logger/logger.js"></script>
+  <script src="/src/client/app/blocks/exception/exception-handler.provider.js"></script>
+  <script src="/src/client/app/blocks/exception/exception.js"></script>
+  <script src="/src/client/app/blocks/router/router-helper.provider.js"></script>
+  <script src="/src/client/app/blocks/underscore/underscore.js"></script>
+  <!-- endinject-->
+  <!-- inject:templates:js-->
+  <!-- endinject-->
+  <!-- endbuild--> 
+
+</html>
